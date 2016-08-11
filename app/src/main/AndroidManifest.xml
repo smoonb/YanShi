@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.administrator.yanshi">
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <!-- 增加网络访问权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--  -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 广播 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- WIFI权限 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
+    <application
+        android:name=".util.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".firsttest"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullscreenTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".FrmLogin"
+            android:label="@string/title_activity_frm_login"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".FrmMain"
+            android:label="@string/title_activity_frm_main"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".FrmScrolling"
+            android:label="@string/title_activity_frm_scrolling"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".FrmTab0"
+            android:label="@string/title_activity_frm_tab0"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".FrmTab1"
+            android:label="@string/title_activity_frm_tab1"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".FrmTab2"
+            android:label="@string/title_activity_frm_tab2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".BrowseNewsActivity"
+            android:label="detail"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <!-- 每增加一个广播就新加一个receiver 里边可以设置广播的内容，例如下面广播开机 -->
+        <receiver
+            android:name=".bcr.BCRBoot"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".nui.frmWifiService"
+            android:exported="false" />
+
+        <activity android:name=".ctyy"></activity>
+        <activity android:name=".WscsActivity"></activity>
+        <activity android:name=".gtyy"></activity>
+        <activity android:name=".cpxxDetail"></activity>
+        <activity android:name=".ShopCartShowAll"></activity>
+    </application>
+
+</manifest>

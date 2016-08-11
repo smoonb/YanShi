@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+	<ImageView
+		android:id="@+id/imageView"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:paddingTop="@dimen/nav_header_vertical_spacing"
+		android:src="@drawable/tap_vegetarian2" />
+	<EditText
+		android:id="@+id/zd_etnumber"
+		android:layout_width="wrap_content"
+		android:layout_height="130dp"
+		android:hint="订购数量">
+	</EditText>
+
+</LinearLayout>

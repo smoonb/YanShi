@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/productImage"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:src="@drawable/ic_launcher" />
+
+    <TextView
+        android:id="@+id/productName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/productImage"
+        android:text="title"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/productDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/productName"
+        android:layout_toRightOf="@id/productImage"
+        android:textSize="10sp"
+        android:text="desc" />
+
+</RelativeLayout>
