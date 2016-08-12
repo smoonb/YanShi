@@ -21,7 +21,7 @@ public class Util extends MyApplication{
 
     }
     public static String getIpStr() {
-        String sd="http://10.11.3.90:8080/yanshiServer/";
+        String sd="http://10.11.17.213:8080/yanshiServer/";
         //String sd="http://192.168.1.104:8080/yanshiServer/";
         return sd;
     }
